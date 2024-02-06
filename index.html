@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radio Buttons Example</title>
+<style>
+
+span.wpcf7-list-item-label {
+    position: relative;
+    padding-left: 5px;
+}
+span.wpcf7-list-item-label:after {
+    content: '';
+    min-width: 12px;
+    min-height: 12px;
+    position: absolute;
+    left: -20px;
+    top: 3px;
+    border: 1px solid rgba(30,30,30,0.5);
+    border-radius: 10px;
+    background-color: white;
+    color: #EC6448 !important;
+}
+input[type="radio"] + span.wpcf7-list-item-label:before {
+    content: '';
+    min-width: 8px;
+    min-height: 8px;
+}
+input[type="radio"]:checked + span.wpcf7-list-item-label:before {
+    content: '';
+    min-width: 8px;
+    min-height: 8px;
+    position: absolute;
+    left: -18px;
+    top: 5px;
+    border: 1px solid rgba(30,30,30,0.5);
+    border-radius: 10px;
+    background-color: #EC6448 !important;
+    z-index: 2;
+}
+input[type="radio"] {
+    visibility: hidden;
+}
+</style>
+</head>
+<body>
+
+<label>
+    <input type="radio" name="option" value="option1">
+    <span class="wpcf7-list-item-label">Option 1</span>
+</label>
+
+<label>
+    <input type="radio" name="option" value="option2">
+    <span class="wpcf7-list-item-label">Option 2</span>
+</label>
+
+<label>
+    <input type="radio" name="option" value="option3">
+    <span class="wpcf7-list-item-label">Option 3</span>
+</label>
+
+</body>
+</html>
